@@ -58,6 +58,19 @@ Recall is more important than accuracy here, because missing a customer who is a
 2. Run `jupyter notebook` and open `customer_churn_prediction.ipynb`
 3. Click Kernel > Restart & Run All
 
+## Streamlit app
+A Streamlit web app lets you enter customer details and see the predicted churn probability.
+
+![Streamlit app](Screenshot%202026-10-06%20120054.png)
+
+Run it locally:
+```
+pip install -r requirements.txt
+streamlit run app.py
+```
+
+Check: a high-risk test customer (tenure 1 month, month-to-month contract, fiber optic, electronic check) gives a 78.61% churn probability in the app, the same as the notebook's `predict_churn()` function.
+
 ## Next steps
-- Build a Streamlit web app for live predictions
+- Deploy the app online
 - Add cross-validation and hyperparameter tuning
